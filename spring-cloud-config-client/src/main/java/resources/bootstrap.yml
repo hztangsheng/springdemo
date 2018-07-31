@@ -1,0 +1,15 @@
+#由于我们的项目中存在需要在应用启动前读取，所以使用bootstrap.yml
+
+server:
+  port: 8888
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      #配置config-server的地址
+      uri: http://localhost:8080
+      #指明远程仓库的分支
+      label: master
+      #配置模式（dev、test、pro）
+      profile: dev
