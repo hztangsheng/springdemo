@@ -22,11 +22,11 @@ public class CloudConfigClientApplication {
     /**
      * 通过远程配置文件服务器获取phone的值
      */
-    @Value("${phone}")String phone;
+    @Value("${version}")String version;
 
     @RequestMapping("/get")
     public  String getPhone(){
-        return "从  config-server 中获取的phone值为："+phone;
+        return "从  config-server 中获取的version值为："+version;
 
     }
 
